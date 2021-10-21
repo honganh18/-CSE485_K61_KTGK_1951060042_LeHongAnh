@@ -30,7 +30,7 @@
                     // Bước 01: Đã tạo sẵn, gọi lại thôi
                     include 'config.php';
                     // Bước 02: Thực hiện TRUY VẤN
-                    $sql = "SELECT e.patientid, e.firstname, e.lastname, e.dateofbirth, e.gender, e.mobile, e.email, e.height,e.weight, e.blood_type, e.created_on, e.modified_on FROM patient e";
+                    $sql = "SELECT e.patientid, e.firstname, e.lastname, e.dateofbirth, e.gender, e.mobile, e.email, e.height,e.eweight, e.blood_type, e.created_on, e.modified_on FROM patient e";
                     $result = mysqli_query($conn,$sql); //Lưu kết quả trả về vào result
                     //Bước 03: Phân tích và xử lý kết quả
                     if(mysqli_num_rows($result)>0){
@@ -44,7 +44,7 @@
                             echo '<td>'.$row['mobile'].'</td>';
                             echo '<td>'.$row['email'].'</td>';
                             echo '<td>'.$row['height'].'</td>';
-                            echo '<td>'.$row['weight'].'</td>';
+                            echo '<td>'.$row['eweight'].'</td>';
                             echo '<td>'.$row['blood_type'].'</td>';
                             echo '<td>'.$row['created_on'].'</td>';
                             echo '<td>'.$row['modified_on'].'</td>';
